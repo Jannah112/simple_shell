@@ -6,16 +6,15 @@
  */
 int number_of_digits(int num)
 {
-        int len = 0;
+	int len = 0;
 
-        while (num != 0)
-        {
-                num /= 10;
-                len++;
-        }
-        return (len);
+	while (num != 0)
+	{
+		num /= 10;
+		len++;
+	}
+	return (len);
 }
-
 
 
 /**
@@ -25,23 +24,23 @@ int number_of_digits(int num)
  */
 void handle_integer(int num)
 {
-        int len, i;
-        char * arr;
-        len = number_of_digits(num);
-        i = 0;
-        arr = malloc(sizeof(char) * len);
-        while (num != 0)
-        {
-                arr[i] = '0' + (num % 10);
-                num /= 10;
-                i++;
-        }
+	int len, i;
+	char *arr;
 
-        for (i = len - 1; i >= 0; i--)
-        {
-                write(STDOUT_FILENO, &arr[i], 1);
-        }
-        free(arr);
+	len = number_of_digits(num);
+	i = 0;
+	arr = malloc(sizeof(char) * len);
+	while (num != 0)
+	{
+		arr[i] = '0' + (num % 10);
+		num /= 10;
+		i++;
+	}
+	for (i = len - 1; i >= 0; i--)
+	{
+		write(STDOUT_FILENO, &arr[i], 1);
+	}
+	free(arr);
 }
 /**
  * print_str - a function to print
