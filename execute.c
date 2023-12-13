@@ -28,7 +28,7 @@ int executes(char **argv, int n, char *p_name)
 		id = fork();
 		if (id == 0)
 		{
-			error = execve(cmd, argv, NULL);
+			error = execve(cmd, argv, environ);
 			if (error == -1)
 			{
 				free(cmd);
