@@ -80,6 +80,6 @@ void tok(char *input, char *p_name, int n)
 	argv[i] = NULL;
 	x = executes(argv, n, p_name);
 	if (x == 2)
-		printf("%s: %d: %s: not found\n", p_name, n, argv[0]);
+		print_str(p_name, n, argv[0]);
 	fr(input, argv, tok_cpy, token, input_tok);
 }

@@ -29,7 +29,7 @@ int cd(char **argv, int n, char *p_name)
 		i = chdir(argv[1]);
 		if (i != 0)
 		{
-			printf("%s: %d: cd: can't cd to %s\n", p_name, n, argv[1]);
+			print_str(p_name, n, argv[1]);
 			free(home);
 			return (-1);
 		}

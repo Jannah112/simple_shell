@@ -21,5 +21,10 @@ void fr(char *, char **, char *, char *, char *);
 int executes(char **argv, int n, char *p_name);
 char *get_path(char *input);
 int cd(char **argv, int n, char *p_name);
+void print_str(char *p_name, int n, char *arg);
+void handle_integer(int num);
+int number_of_digits(int num);
+
+
 
 #endif
