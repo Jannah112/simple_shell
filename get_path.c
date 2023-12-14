@@ -1,4 +1,6 @@
 #include "shell.h"
+
+
 /**
  * get_path - hjj
  * @input: ghj
@@ -30,7 +32,6 @@ char *path = NULL, *path_cp = NULL, *file_path, *path_tok = NULL, *b_in = NULL;
 			if (stat(file_path, &buf) == 0)
 			{
 				free(path_cp);
-				free(path);
 				free(b_in);
 				return (file_path);
 			}
