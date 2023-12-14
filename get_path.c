@@ -14,19 +14,19 @@ char *path = NULL, *path_cp = NULL, *file_path, *path_tok = NULL, *b_in = NULL;
 	path = our_getenv("PATH");
 	if (path)
 	{
-		b_in = _strdup(input);
-		path_cp = _strdup(path);
-		input_len = _strlen(input);
+		b_in = strdup(input);
+		path_cp = strdup(path);
+		input_len = strlen(input);
 		path_tok = strtok(path_cp, seperator);
 		while (path_tok != NULL)
 		{
-			dir_len = _strlen(path_tok);
+			dir_len = strlen(path_tok);
 			file_path = malloc(input_len + dir_len + 2);
 			malloc_return(file_path);
-			_strcpy(file_path, path_tok);
-			_strcat(file_path, "/");
-			_strcat(file_path, input);
-			_strcat(file_path, "\0");
+			strcpy(file_path, path_tok);
+			strcat(file_path, "/");
+			strcat(file_path, input);
+			strcat(file_path, "\0");
 			if (stat(file_path, &buf) == 0)
 			{
 				free(path_cp);

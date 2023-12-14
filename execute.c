@@ -14,7 +14,7 @@ int executes(char **argv, int n, char *p_name)
 
 	if (_strcmp(argv[0], "cd") == 0)
 		return (cd(argv, n, p_name));
-	if (_strcmp(argv[0], "env") == 0)
+	if (strcmp(argv[0], "env") == 0)
 		return (print_env());
 	if (argv)
 	{
