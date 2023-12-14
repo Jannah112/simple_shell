@@ -1,4 +1,17 @@
 #include "shell.h"
+
+void exit_stat(pid_t i, int j)
+{
+	if (waitpid(i, &j, 0) == -1)
+	{
+		perror("waitpid");
+		exit(EXIT_FAILURE);
+	}
+	if (WIFEXITED(j) && WEXITSTATUS(j) != 0)
+	{
+		exit(2);
+	}
+}
 /**
  * executes - ghjj
  * @argv: yuu
@@ -9,7 +22,7 @@
 int executes(char **argv, int n, char *p_name)
 {
 	pid_t id;
-	int error;
+	int error, status =0;
 	char *input = NULL, *cmd = NULL;
 
 	if (_strcmp(argv[0], "cd") == 0)
@@ -42,6 +55,7 @@ int executes(char **argv, int n, char *p_name)
 		}
 		else
 		{
+			exit_stat(id, status);
 			wait(NULL);
 		}
 	}

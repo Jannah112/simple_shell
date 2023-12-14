@@ -29,7 +29,6 @@ int cd(char **argv, int n, char *p_name);
 void print_str(char *p_name, int n, char *arg);
 void handle_integer(int num);
 int number_of_digits(int num);
-
-
+void exit_stat(pid_t i, int j);
 
 #endif
