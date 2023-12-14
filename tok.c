@@ -67,7 +67,7 @@ void tok(char *input, char *p_name, int n)
 	}
 	tok_num++;
 	argv = malloc(sizeof(char *) * tok_num);
-	malloc_return(*argv);
+	malloc_return(argv);
 	token = strtok(tok_cpy, delim);
 	while (token)
 	{
