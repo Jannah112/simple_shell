@@ -18,7 +18,7 @@ char *read_input(void)
 	if (_strcmp(input, "exit\n") == 0)
 	{
 		free(input);
-		exit(EXIT_SUCCESS);
+		return (-1);
 	}
 	if (num_chars == -1)
 	{
