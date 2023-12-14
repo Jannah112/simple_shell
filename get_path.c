@@ -20,7 +20,7 @@ char *path = NULL, *path_cp = NULL, *file_path, *path_tok = NULL, *b_in = NULL;
 		path_tok = strtok(path_cp, seperator);
 		while (path_tok != NULL)
 		{
-			dir_len = strlen(path_tok);
+			dir_len = _strlen(path_tok);
 			file_path = malloc(input_len + dir_len + 2);
 			malloc_return(file_path);
 			_strcpy(file_path, path_tok);

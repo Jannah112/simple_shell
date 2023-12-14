@@ -71,7 +71,7 @@ void tok(char *input, char *p_name, int n)
 	token = strtok(tok_cpy, delim);
 	while (token)
 	{
-	argv[i] = malloc(sizeof(char) * strlen(token));
+	argv[i] = malloc(sizeof(char) * _strlen(token));
 	malloc_return(argv[i]);
 	_strcpy(argv[i], token);
 	token = strtok(NULL, delim);
