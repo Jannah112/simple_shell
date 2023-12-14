@@ -1,3 +1,3 @@
 ------------------- SIMPLE SHELL ---------------------
-A team project by:
+ team project by:
 Alaa Osman & Ahmed Ali
