@@ -4,9 +4,8 @@
  * @str: fjrjjr
  * Return: ddjdjjdj
  */
-int malloc_return(char *str)
+void malloc_return(void *str)
 {
 	if (str == NULL)
-		return (-1);
-	return (0);
+		exit(EXIT_FAILURE);
 }
