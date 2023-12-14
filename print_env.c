@@ -9,7 +9,7 @@ int print_env(void)
 
 	while (*s)
 	{
-		write(STDOUT_FILENO, *s, strlen(*s));
+		write(STDOUT_FILENO, *s, _strlen(*s));
 		write(STDOUT_FILENO, "\n", 1);
 		s++;
 	}

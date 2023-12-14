@@ -4,7 +4,7 @@
  * @name: djjdjdj
  * Return: djdjdjdj
  */
-char *our_getenv(const char *name)
+char *our_getenv(char *name)
 {
 	char *path_value;
 	char *ac = NULL;
@@ -21,7 +21,7 @@ char *our_getenv(const char *name)
 	i = 0;
 	while (environ[i])
 	{
-		s[i] = strdup(environ[i]);
+		s[i] = _strdup(environ[i]);
 		i++;
 	}
 	s[i] = NULL;
@@ -29,10 +29,10 @@ char *our_getenv(const char *name)
 	while (s[i])
 	{
 		path_value = strtok(s[i], "=");
-		if (strcmp(path_value, name) == 0)
+		if (_strcmp(path_value, name) == 0)
 		{
 			path_value = strtok(NULL, "=");
-			ac = strdup(path_value);
+			ac = _strdup(path_value);
 		}
 		i++;
 	}

@@ -47,12 +47,12 @@ void tok(char *input, char *p_name, int n)
 	char **argv;
 	int tok_num = 0, i = 0, x = 0;
 
-	input_tok = strdup(input);
-	tok_cpy = strdup(input);
+	input_tok = _strdup(input);
+	tok_cpy = _strdup(input);
 	token = strtok(input_tok, delim);
 	while (token)
 	{
-		if (strcmp(token, " ") == 0)
+		if (_strcmp(token, " ") == 0)
 			token = strtok(NULL, delim);
 		else
 		{
@@ -73,7 +73,7 @@ void tok(char *input, char *p_name, int n)
 	{
 	argv[i] = malloc(sizeof(char) * strlen(token));
 	malloc_return(argv[i]);
-	strcpy(argv[i], token);
+	_strcpy(argv[i], token);
 	token = strtok(NULL, delim);
 	i++;
 	}

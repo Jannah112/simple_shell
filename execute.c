@@ -12,9 +12,9 @@ int executes(char **argv, int n, char *p_name)
 	int error;
 	char *input = NULL, *cmd = NULL;
 
-	if (strcmp(argv[0], "cd") == 0)
+	if (_strcmp(argv[0], "cd") == 0)
 		return (cd(argv, n, p_name));
-	if (strcmp(argv[0], "env") == 0)
+	if (_strcmp(argv[0], "env") == 0)
 		return (print_env());
 	if (argv)
 	{
@@ -34,7 +34,7 @@ int executes(char **argv, int n, char *p_name)
 				free(cmd);
 				exit(EXIT_FAILURE);
 			}
-													}
+		}
 		else if (id < 0)
 		{
 			free(cmd);

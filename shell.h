@@ -11,8 +11,13 @@
 
 extern char **environ;
 
+int _strlen(char *s);
+char *_strcpy(char *dest, char *src);
+char *_strcat(char *dest, char *src);
+int _strcmp(char *s1, char *s2);
+char *_strdup(char *str);
 int print_env(void);
-char *our_getenv(const char *name);
+char *our_getenv(char *name);
 char *read_input(void);
 int malloc_return(char *str);
 void tok(char *input, char *p_name, int n);

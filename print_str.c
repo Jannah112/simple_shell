@@ -50,10 +50,10 @@ void handle_integer(int num)
 */
 void print_str(char *p_name, int n, char *arg)
 {
-	write(STDOUT_FILENO, p_name, strlen(p_name));
+	write(STDOUT_FILENO, p_name, _strlen(p_name));
 	write(STDOUT_FILENO, ": ", 2);
 	handle_integer(n);
 	write(STDOUT_FILENO, ": ", 2);
-	write(STDOUT_FILENO, arg, strlen(arg));
+	write(STDOUT_FILENO, arg, _strlen(arg));
 	write(STDOUT_FILENO, ": not found\n", 12);
 }
