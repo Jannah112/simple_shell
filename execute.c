@@ -22,7 +22,7 @@ void exit_stat(pid_t i, int j)
 int executes(char **argv, int n, char *p_name)
 {
 	pid_t id;
-	int error, status =0;
+	int error, status = 0;
 	char *input = NULL, *cmd = NULL;
 
 	if (_strcmp(argv[0], "cd") == 0)
