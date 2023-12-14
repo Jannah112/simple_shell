@@ -19,7 +19,7 @@ char *_strdup(char *str);
 int print_env(void);
 char *our_getenv(char *name);
 char *read_input(void);
-int malloc_return(char *str);
+void malloc_return(void *str);
 void tok(char *input, char *p_name, int n);
 void fre(char *, char *, char *);
 void fr(char *, char **, char *, char *, char *);
