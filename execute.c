@@ -1,5 +1,9 @@
 #include "shell.h"
-
+/**
+ * exit_stat - dflkdjfk
+ * @i: fjkdfkj
+ * @j:dklfjk
+*/
 void exit_stat(pid_t i, int j)
 {
 	if (waitpid(i, &j, 0) == -1)
